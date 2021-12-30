@@ -1,0 +1,4 @@
+{
+    "MODEL_PATH":"./api/resources/prediction_model.joblib",
+    "SQL_ENGINE":"sqlite:///api/resources/flask_logs.db"
+}
