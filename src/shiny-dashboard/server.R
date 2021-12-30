@@ -13,7 +13,7 @@ db_get_api_call_data <- function(){
 }
 
 db_get_request_response_data <- function(){
-    con <- dbConnect(SQLite(),"..api/resources/flask_logs.db")
+    con <- dbConnect(SQLite(),"../api/resources/flask_logs.db")
     data <- dbGetQuery(con, "SELECT request,response FROM requests where status=200 and path='/api/predict' and method='GET'")
     data <- data %>% rowwise() %>% mutate(label = fromJSON(response)$label,prob=fromJSON(response)$prob1)
     dbDisconnect(con)
