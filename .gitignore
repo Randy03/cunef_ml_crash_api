@@ -140,4 +140,4 @@ cython_debug/
 #Extensions
 *.csv
 *.joblib
-*.txt
+
