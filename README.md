@@ -18,9 +18,9 @@ Archivo config.json: aca se configuran los path donde se encuentrar los resource
 Archivo filldb.py: script que se utilizo para pre cargar la base sqlite, lo que hace es tomar una muestra de datos del archivo crash_transformed_c_sev.csv generado por el notebook EDA_C_SEV del repositorio https://github.com/Randy03/cunef_ml_canadian_crash.git y llamar a la API para que haga la prediccion. (Aclaracion: para la muestra se tomo 50% de accidentes que tienen fallecidos y 50% que no tienen)
 
 #### Como llamar a la API
-
-  curl -X GET http://localhost:5000/api/predict?C_MNTH=03&C_WDAY=2&C_HOUR=3&C_VEHS=10&C_CONF=01&C_RCFG=13&C_WTHR=1&C_RSUR=4&C_RALN=4&C_TRAF=04&V_TYPE=24&P_SEX=M&P_AGE=67&P_SAFE=10&C_PERS=20&V_AGE=4
-
+```
+ curl -X GET http://localhost:5000/api/predict?C_MNTH=03&C_WDAY=2&C_HOUR=3&C_VEHS=10&C_CONF=01&C_RCFG=13&C_WTHR=1&C_RSUR=4&C_RALN=4&C_TRAF=04&V_TYPE=24&P_SEX=M&P_AGE=67&P_SAFE=10&C_PERS=20&V_AGE=4
+```
 ### Shiny dashboard
 
 Se realizo un dashboard en shiny ara evaluar ciertas metricas de la API, el dashboard utiliza la misma base de datos que la API y contiene 4 graficos:
